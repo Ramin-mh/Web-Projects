@@ -102,6 +102,20 @@ function checkAnswer(button, ans) {
   } else {
     result.textContent = "Wrong answer";
     button.style.backgroundColor = "red";
+    switch(ans){
+      case optionA.textContent:
+        optionA.style.backgroundColor = "green";
+        break;
+      case optionB.textContent:
+        optionB.style.backgroundColor = "green";
+        break;
+      case optionC.textContent:
+        optionC.style.backgroundColor = "green";
+        break;
+      case optionD.textContent:
+        optionD.style.backgroundColor = "green";
+        break;
+    }
   }
 
   result.style.display = "block";
@@ -120,7 +134,10 @@ function checkAnswer(button, ans) {
     optionC.disabled = false;
     optionD.disabled = false;
 
-    button.style.backgroundColor = "";
+    optionA.style.backgroundColor = "";
+    optionB.style.backgroundColor = "";
+    optionC.style.backgroundColor = "";
+    optionD.style.backgroundColor = "";
 
     questionSession();
   };
